@@ -1,0 +1,16 @@
+<h1>This is Main#ex2</h1>
+<p>Find me in app/views/main/ex2.html.erb</p>
+<p>the next line will print a to b </p>
+<% if @satisfy %>
+  <% for i in @a_int..@b_int%>
+    <%= i %>
+    <br>
+  <% end %>
+<% else %>
+  you have to include both a and b with integer value
+<% end %>
+<% %>
+
+<br/>
+The current time is <%= Time.zone.now %>
+<br/>
