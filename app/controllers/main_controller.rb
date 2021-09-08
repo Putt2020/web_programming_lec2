@@ -27,4 +27,14 @@ class MainController < ApplicationController
 	  	end
 	end	
   end
+  
+  def pCreate
+  	@message = params[:msg]
+  	@user_id = params[:user_id]
+  	@u = User.find(@user_id)
+  	Post.create(msg: @message, user_id: @user_id)
+  end
+  
+  def uRead
+  end
 end

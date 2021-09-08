@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get 'welcome', to: 'main#welcome'
   get 'contact_us', to: 'main#contact'
   get 'loop', to: 'main#ex2'
+  get 'post/create', to: 'main#pCreate'
+  get 'user/read', to: 'main#uRead'
 end
