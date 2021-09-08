@@ -36,5 +36,8 @@ class MainController < ApplicationController
   end
   
   def uRead
+  	@user_id = params[:user_id]
+  	@pos = User.find(@user_id).posts.reload
+  	@uName = User.find(@user_id).name
   end
 end

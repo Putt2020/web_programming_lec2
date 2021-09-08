@@ -1,20 +1,24 @@
-<h1>This is Main#xxx</h1>
-<p>Find me in app/views/main/xxx.html.erb</p>
+<h1>This is Main#uRead</h1>
+<p>Find me in app/views/main/uRead.html.erb</p>
 
-<p>huwu uwu uwu yayayay</p>
-
-<br/>
-<%= 1 + 5%>
+<p>attempting to find posts ...</p>
 
 <br/>
-the result is <%= @result%>
-
-<br/>
-<%= (1..10).to_a %>
+<p>========== this user(<%= @uName%>) post ==========</p>
 
 <br/>
 
+<%if @pos.empty? %>
+  this user has not post anything yet
+<%else%>
+  <%for i in 0..@pos.length()-1 %>
+    post id is
+    <%= i+1%>
+    with these message
+    <%= @pos[i].msg%>
+    <br/>
+  <%end%>
+<%end%>
 
-The current date is <%= Date.today %>
-The current time is <%= Time.zone.now %>
+
 <br/>
